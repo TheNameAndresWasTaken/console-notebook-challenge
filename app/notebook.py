@@ -4,7 +4,7 @@ class Note:
     HIGH:str="HIGH"
     MEDIUM:str="MEDIUM"
     LOW:str="LOW"
-    def __init__(self, code: str,title: str, text:str, improtance:str,creation_date: datetime, tags: list[str]):
+    def __init__(self, code: str,title: str, text:str, improtance:str):
         self.code: str=code
         self.title: str = title
         self.text: str = text
@@ -12,4 +12,6 @@ class Note:
         self.creation_date:datetime =datetime.now()
         self.tags:list[str]=[]
 
-
+    def add_tag(self,tag:str):
+        if tag not in self.tags:
+            self.tags.append(tag)
