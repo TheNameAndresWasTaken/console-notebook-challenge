@@ -10,5 +10,6 @@ class Note:
         self.text: str = text
         self.importance: str = improtance
         self.creation_date:datetime =datetime.now()
+        self.tags:list[str]=[]
 
 
